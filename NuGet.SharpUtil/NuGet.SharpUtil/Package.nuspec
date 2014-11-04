@@ -7,7 +7,7 @@
     <authors>Andrew Sitaev</authors>
     <owners></owners>
     <description>
-      SharpUtil is a small bunch of formatters and thread-safe wrappers. SharpUtil provides a uniform way of formatting objects, parsing strings and making thread-safe wrappers.
+      SharpUtil is a small bunch of formatters and thread-safe wrappers. SharpUtil provides a uniform way of formatting objects, parsing strings and making thread-safe wrappers. Project's sources are in SVN: https://github.com/AndreyCorelli/nuget_sharp_util.git/trunk/NuGet.SharpUtil
     </description>
     <releaseNotes>
     </releaseNotes>
