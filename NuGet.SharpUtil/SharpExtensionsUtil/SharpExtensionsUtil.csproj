@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E84D4493-721C-4E02-A429-33F5BE1294BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpExtensionsUtil</RootNamespace>
+    <AssemblyName>SharpExtensionsUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release45|AnyCPU'">
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OutputPath>bin\Release45\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>lib\tradesharp.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\github\tradesharp\trunk\src\TradeSharp.Server\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collection\EverSortedList.cs" />
+    <Compile Include="Collection\IStorage.cs" />
+    <Compile Include="Converter\Converter.cs" />
+    <Compile Include="Converter\Formatter.cs" />
+    <Compile Include="Converter\StringFormatter.cs" />
+    <Compile Include="Extension\CollectionExtensions.cs" />
+    <Compile Include="Extension\MathExtensions.cs" />
+    <Compile Include="Extension\RandomExtensions.cs" />
+    <Compile Include="Extension\XmlNodeExtensions.cs" />
+    <Compile Include="Form\CaptchaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CaptchaDialog.Designer.cs">
+      <DependentUpon>CaptchaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CheckedListBoxColorableDraggable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\CheckedListBoxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CheckedListBoxDialog.Designer.cs">
+      <DependentUpon>CheckedListBoxDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CheckedOrderedListBoxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CheckedOrderedListBoxDialog.Designer.cs">
+      <DependentUpon>CheckedOrderedListBoxDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DialogWithControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DialogWithControl.Designer.cs">
+      <DependentUpon>DialogWithControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DropDownDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DropDownDialog.Designer.cs">
+      <DependentUpon>DropDownDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ListSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ListSelectDialog.Designer.cs">
+      <DependentUpon>ListSelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SimpleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SimpleDialog.Designer.cs">
+      <DependentUpon>SimpleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TickerUpdateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TickerUpdateDialog.Designer.cs">
+      <DependentUpon>TickerUpdateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\FloodSafeLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\SharpCodeContract.cs" />
+    <Compile Include="Reflection\StronglyName.cs" />
+    <Compile Include="ThreadSafe\ManagerBase.cs" />
+    <Compile Include="ThreadSafe\Scheduler.cs" />
+    <Compile Include="ThreadSafe\ThreadSafeDateTime.cs" />
+    <Compile Include="ThreadSafe\ThreadSafeList.cs" />
+    <Compile Include="ThreadSafe\ThreadSafeQueue.cs" />
+    <Compile Include="ThreadSafe\ThreadSafeStorage.cs" />
+    <Compile Include="ThreadSafe\ThreadSafeTimeStamp.cs" />
+    <Compile Include="ThreadSafe\ThreadSafeUpdatingList.cs" />
+    <Compile Include="Util\AppConfig.cs" />
+    <Compile Include="Util\AppMessageFilter.cs" />
+    <Compile Include="Util\CheckBoxPropertyGridEditor.cs" />
+    <Compile Include="Util\CheckedListBoxColorableDraggable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\CompressionHelper.cs" />
+    <Compile Include="Util\Dialogs.cs" />
+    <Compile Include="Util\EncodingFriendlyName.cs" />
+    <Compile Include="Util\ExecutablePath.cs" />
+    <Compile Include="Util\ExpressionResolver.cs" />
+    <Compile Include="Util\ExpressionResolverLiveParams.cs" />
+    <Compile Include="Util\GenericPatterns.cs" />
+    <Compile Include="Util\IniFile.cs" />
+    <Compile Include="Util\SymCipher.cs" />
+    <Compile Include="Util\TimeLogger.cs" />
+    <Compile Include="Util\Transliteration.cs" />
+    <Compile Include="Util\WordGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Form\CaptchaDialog.resx">
+      <DependentUpon>CaptchaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CheckedListBoxDialog.resx">
+      <DependentUpon>CheckedListBoxDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CheckedOrderedListBoxDialog.resx">
+      <DependentUpon>CheckedOrderedListBoxDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DialogWithControl.resx">
+      <DependentUpon>DialogWithControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DropDownDialog.resx">
+      <DependentUpon>DropDownDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ListSelectDialog.resx">
+      <DependentUpon>ListSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SimpleDialog.resx">
+      <DependentUpon>SimpleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TickerUpdateDialog.resx">
+      <DependentUpon>TickerUpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\tradesharp.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
