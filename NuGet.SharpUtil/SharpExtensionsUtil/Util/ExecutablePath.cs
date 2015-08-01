@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace SharpExtensionsUtil.Util
@@ -30,6 +32,13 @@ namespace SharpExtensionsUtil.Util
                 if (string.IsNullOrEmpty(execFileName)) SetExecAppProperty();
                 return execFileName;
             }
+        }
+
+        public static string Combine(params object[] pathParts)
+        {
+            var parts = new List<string> { ExecPath };
+            parts.AddRange(pathParts.Select(p => p.ToString()));
+            return Path.Combine(parts.ToArray());
         }
 
         private static void SetExecAppProperty()

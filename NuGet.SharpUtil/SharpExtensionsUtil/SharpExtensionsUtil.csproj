@@ -58,7 +58,11 @@
     <Reference Include="log4net">
       <HintPath>lib\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.6\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -75,7 +79,11 @@
     <Compile Include="Converter\Converter.cs" />
     <Compile Include="Converter\Formatter.cs" />
     <Compile Include="Converter\StringFormatter.cs" />
+    <Compile Include="Database\BulkCopy.cs" />
+    <Compile Include="Database\MsSqlBulkCopy.cs" />
+    <Compile Include="Database\MySqlBulkCopy.cs" />
     <Compile Include="Extension\CollectionExtensions.cs" />
+    <Compile Include="Extension\ExceptionFormatter.cs" />
     <Compile Include="Extension\MathExtensions.cs" />
     <Compile Include="Extension\RandomExtensions.cs" />
     <Compile Include="Extension\XmlNodeExtensions.cs" />
@@ -141,6 +149,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\SharpCodeContract.cs" />
     <Compile Include="Reflection\StronglyName.cs" />
+    <Compile Include="Tcp\BlockingQueue.cs" />
+    <Compile Include="Tcp\MessageReceivedArgs.cs" />
+    <Compile Include="Tcp\Pool.cs" />
+    <Compile Include="Tcp\ReceivedMessage.cs" />
+    <Compile Include="Tcp\SimplSocketServer.cs" />
+    <Compile Include="Tcp\SocketErrorArgs.cs" />
     <Compile Include="ThreadSafe\ManagerBase.cs" />
     <Compile Include="ThreadSafe\Scheduler.cs" />
     <Compile Include="ThreadSafe\ThreadSafeDateTime.cs" />
@@ -163,10 +177,15 @@
     <Compile Include="Util\ExpressionResolverLiveParams.cs" />
     <Compile Include="Util\GenericPatterns.cs" />
     <Compile Include="Util\IniFile.cs" />
+    <Compile Include="Util\ReverseLineReader.cs" />
     <Compile Include="Util\SymCipher.cs" />
     <Compile Include="Util\TimeLogger.cs" />
     <Compile Include="Util\Transliteration.cs" />
+    <Compile Include="Util\TypedStreamReaderWriter.cs" />
     <Compile Include="Util\WordGenerator.cs" />
+    <Compile Include="WebServer\BaseWebServer.cs" />
+    <Compile Include="WebServer\HttpRequestProcessor.cs" />
+    <Compile Include="WebServer\IpFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
@@ -202,7 +221,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="lib\tradesharp.pfx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
