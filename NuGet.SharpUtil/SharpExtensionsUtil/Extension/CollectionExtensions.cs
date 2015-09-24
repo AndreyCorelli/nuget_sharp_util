@@ -6,6 +6,28 @@ namespace SharpExtensionsUtil.Extension
 {
     public static class CollectionExtensions
     {
+        public static TV GetFirstMatchedValue<T, TV>(this IEnumerable<T> list, Func<T, bool> predicate, Func<T, TV> selector, TV defaultVal)
+        {
+            if (list == null) return defaultVal;
+            foreach (var item in list)
+            {
+                var matched = predicate(item);
+                if (matched) return selector(item);
+            }
+            return defaultVal;
+        }
+
+        public static List<T> TrimStartWhenFalse<T>(this List<T> list, Func<T, bool> predicate)
+        {
+            if (list == null || list.Count == 0) return list;
+            while (list.Count > 0)
+            {
+                if (predicate(list[0])) return list;
+                list.RemoveAt(0);
+            }
+            return list;
+        }
+
         public static bool RemoveByPredicate<T>(this IList<T> list, Predicate<T> p, bool removeAll = false)
         {
             var result = false;
