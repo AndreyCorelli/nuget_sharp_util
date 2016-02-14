@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Text;
+using System.Collections.Generic;
 
 namespace SharpExtensionsUtil.Extension
 {
@@ -13,19 +13,21 @@ namespace SharpExtensionsUtil.Extension
 
         public static string FormatDatabaseException(this Exception ex)
         {
-            var sb = new StringBuilder(ex.ToString());
-            ExploreInnerException(sb, ex);
-            return sb.ToString();
+            return ex.ExploreInnerException();
         }
 
-        private static void ExploreInnerException(StringBuilder sb, Exception ex)
+        public static string ExploreInnerException(this Exception ex)
         {
-            if (ex == null || ex.InnerException == null) return;
-            sb.AppendLine("Inner exception ========================");
-            sb.AppendLine();
-            sb.Append(ex.InnerException);
+            var errors = new List<string>();
+            ExploreInnerException(ex, errors);
+            return string.Join("> ", errors);
+        }
+
+        private static void ExploreInnerException(Exception ex, List<string> errors)
+        {
+            errors.Add(ex.GetType().Name + ": " + ex.Message);
             if (ex.InnerException != null)
-                ExploreInnerException(sb, ex.InnerException.InnerException);
+                ExploreInnerException(ex.InnerException, errors);
         }
     }
 }

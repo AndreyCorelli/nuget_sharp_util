@@ -585,10 +585,16 @@ namespace SharpExtensionsUtil.Converter
         {
             return ToStringUniform(doc, Encoding.UTF8, false);
         }
-        
+
         #endregion
 
         #region Comparison
+
+        public static bool IsStringNullEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
+
         public static bool SameMoney(this float amount, float cmpAmount)
         {
             return Math.Abs(Math.Abs(amount) - Math.Abs(cmpAmount)) < 0.01f;

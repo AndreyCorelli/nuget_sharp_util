@@ -61,7 +61,52 @@ namespace SharpExtensionsUtil.Logging
                 
             }
             Logger.Log(entryType, fmt, ptrs);
-        }        
+        }
 
+        /// <summary>
+        /// по одному magic сообщения отправляются не чаще чем в minMillsBetween
+        /// </summary>        
+        public void LogMessageCheckFlood(LogEntryType entryType, int msgMagic, int minMills, string msg)
+        {
+            DateTime time;
+            if (!logFloodTimes.TryGetValue(msgMagic, out time))
+                logFloodTimes.Add(msgMagic, DateTime.Now.AddMilliseconds(minMills));
+            else
+            {
+                if (DateTime.Now < time) return;
+                try
+                {
+                    logFloodTimes[msgMagic] = DateTime.Now.AddMilliseconds(minMills);
+                }
+                catch
+                {
+                }
+
+            }
+            Logger.Log(entryType, msg);
+        }
+
+        /// <summary>
+        /// по одному magic сообщения отправляются не чаще чем в minMillsBetween
+        /// </summary>        
+        public void LogMessageCheckFlood(LogEntryType entryType, int msgMagic, string msg)
+        {
+            DateTime time;
+            if (!logFloodTimes.TryGetValue(msgMagic, out time))
+                logFloodTimes.Add(msgMagic, DateTime.Now.AddMilliseconds(minMillsBetween));
+            else
+            {
+                if (DateTime.Now < time) return;
+                try
+                {
+                    logFloodTimes[msgMagic] = DateTime.Now.AddMilliseconds(minMillsBetween);
+                }
+                catch
+                {
+                }
+
+            }
+            Logger.Log(entryType, msg);
+        }
     }
 }

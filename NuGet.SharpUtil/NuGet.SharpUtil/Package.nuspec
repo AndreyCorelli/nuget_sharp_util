@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SharpUtil</id>
-    <version>1.0.0</version>
+    <version>1.0.7</version>
     <title>SharpUtil Library bunch</title>
     <authors>Andrew Sitaev</authors>
     <owners></owners>
@@ -19,10 +19,12 @@
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
-    <copyright>Copyright  2014</copyright>
+    <copyright>Copyright  2016</copyright>
     <dependencies>
-        <group targetFramework="net40">
+        <group targetFramework="net45">
           <dependency id="log4net" version="1.2.10" />
+          <dependency id="Newtonsoft.Json" version="7.0.1" />
+          <dependency id="MySql.Data" version="6.9.6" />
         </group>
     </dependencies>
     <references></references>

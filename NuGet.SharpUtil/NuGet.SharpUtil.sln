@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.SharpUtil", "NuGet.SharpUtil\NuGet.SharpUtil.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpExtensionsUtil", "SharpExtensionsUtil\SharpExtensionsUtil.csproj", "{E84D4493-721C-4E02-A429-33F5BE1294BF}"
@@ -11,7 +13,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		Release40|Any CPU = Release40|Any CPU
 		Release45|Any CPU = Release45|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -19,24 +20,18 @@ Global
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release40|Any CPU.ActiveCfg = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release40|Any CPU.Build.0 = Release|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release45|Any CPU.ActiveCfg = Release|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release45|Any CPU.Build.0 = Release|Any CPU
 		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Release40|Any CPU.ActiveCfg = Release45|Any CPU
-		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Release40|Any CPU.Build.0 = Release45|Any CPU
 		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Release45|Any CPU.ActiveCfg = Release45|Any CPU
 		{E84D4493-721C-4E02-A429-33F5BE1294BF}.Release45|Any CPU.Build.0 = Release45|Any CPU
 		{D592295C-2F92-4109-8137-098CF73A4EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D592295C-2F92-4109-8137-098CF73A4EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D592295C-2F92-4109-8137-098CF73A4EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D592295C-2F92-4109-8137-098CF73A4EA6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D592295C-2F92-4109-8137-098CF73A4EA6}.Release40|Any CPU.ActiveCfg = Release|Any CPU
-		{D592295C-2F92-4109-8137-098CF73A4EA6}.Release40|Any CPU.Build.0 = Release|Any CPU
 		{D592295C-2F92-4109-8137-098CF73A4EA6}.Release45|Any CPU.ActiveCfg = Release|Any CPU
 		{D592295C-2F92-4109-8137-098CF73A4EA6}.Release45|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
